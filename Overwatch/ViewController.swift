@@ -23,6 +23,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var secondNameLabel: UILabel!
+    @IBOutlet weak var thirdNameLabel: UILabel!
+    @IBOutlet weak var fourthNameLabel: UILabel!
+    @IBOutlet weak var fifthNameLabel: UILabel!
+    @IBOutlet weak var sixthNameLabel: UILabel!
+    
+    var nameLabels: [UILabel]!
     var heroButtons: [OverwatchButton]!
     
     override func viewDidLoad() {
@@ -37,9 +45,15 @@ class ViewController: UIViewController {
     
     @IBAction func overwatchButtonTapped(_ sender: OverwatchButton) {
         heroButtons.forEach { $0.layer.borderWidth = 0.0 }
+        nameLabels.forEach { $0.layer.borderWidth = 0.0; $0.text = "" }
         sender.layer.borderColor = UIColor.green.cgColor
         sender.layer.borderWidth = 4.0
         updateLabels(with: sender.hero)
+        let index = heroButtons.index(of: sender)!
+        let nameLabel = nameLabels[index]
+        nameLabel.layer.borderWidth = 4.0
+        nameLabel.layer.borderColor = UIColor.green.cgColor
+        nameLabel.text = sender.hero.name.description
     }
     
     func updateLabels(with hero: OverwatchHero) {
@@ -68,6 +82,12 @@ extension ViewController {
     
     func setupButtons() {
         heroButtons = [firstHeroButton, secondHeroButton, thirdHeroButton, fourthHeroButton, fifthHeroButton, sixthHeroButton]
+        
+        nameLabels = [firstNameLabel, secondNameLabel, thirdNameLabel, fourthNameLabel, fifthNameLabel, sixthNameLabel]
+        
+        nameLabels.forEach { $0.text = "" }
     }
+    
+    
 
 }
