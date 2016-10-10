@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecL-Ud-kPQ" userLabel="ButtonStackView">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="efn-rU-2k8">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-p9-KLy" customClass="OverwatchButton" customModule="Overwatch" customModuleProvider="target">
+                                                <connections>
+                                                    <action selector="overwatchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nf2-HJ-zXx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="efn-rU-2k8" secondAttribute="height" multiplier="5.8064:10" id="dAe-c4-iBt"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="N2d-NM-Bka">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-Ta-JDr" customClass="OverwatchButton" customModule="Overwatch" customModuleProvider="target">
+                                                <connections>
+                                                    <action selector="overwatchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6f-IS-rTJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="N2d-NM-Bka" secondAttribute="height" multiplier="5.8064:10" id="pt5-Oy-YPY"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h4F-XE-LL1">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFk-A0-Xic" customClass="OverwatchButton" customModule="Overwatch" customModuleProvider="target">
+                                                <connections>
+                                                    <action selector="overwatchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0G-BI-191"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="h4F-XE-LL1" secondAttribute="height" multiplier="5.8064:10" id="XV5-3d-mZ6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hVl-oM-bTP">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0m-OK-4eM" customClass="OverwatchButton" customModule="Overwatch" customModuleProvider="target">
+                                                <connections>
+                                                    <action selector="overwatchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NaC-gf-SkF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hVl-oM-bTP" secondAttribute="height" multiplier="5.8064:10" id="JCr-0J-BvR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q0v-Sf-tKV">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fq-X7-GoV" customClass="OverwatchButton" customModule="Overwatch" customModuleProvider="target">
+                                                <connections>
+                                                    <action selector="overwatchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X9N-Kb-yNl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Q0v-Sf-tKV" secondAttribute="height" multiplier="5.8064:10" id="hDL-3A-zaj"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mwh-62-nLg">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hz-ae-psN" customClass="OverwatchButton" customModule="Overwatch" customModuleProvider="target">
+                                                <connections>
+                                                    <action selector="overwatchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REg-5b-3NK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mwh-62-nLg" secondAttribute="height" multiplier="5.8064:10" id="yu7-3y-rdV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCQ-mn-arF">
+                                <attributedString key="attributedText">
+                                    <fragment content="Ana">
+                                        <attributes>
+                                            <font key="NSFont" size="50" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gIU-ct-RRJ" userLabel="TextStackView">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvA-Jo-76A">
+                                        <attributedString key="attributedText">
+                                            <fragment content="Type: ">
+                                                <attributes>
+                                                    <font key="NSFont" size="28" name="AvenirNext-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-vR-HFS">
+                                        <attributedString key="attributedText">
+                                            <fragment content="Attack: ">
+                                                <attributes>
+                                                    <font key="NSFont" size="28" name="AvenirNext-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiJ-hu-g8T">
+                                        <attributedString key="attributedText">
+                                            <fragment content="Heal: ">
+                                                <attributes>
+                                                    <font key="NSFont" size="28" name="AvenirNext-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-Ag-qSy">
+                                        <attributedString key="attributedText">
+                                            <fragment content="Hit Points: ">
+                                                <attributes>
+                                                    <font key="NSFont" size="28" name="AvenirNext-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OverwatchCharacters" translatesAutoresizingMaskIntoConstraints="NO" id="dla-lA-PlY">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dla-lA-PlY" secondAttribute="height" multiplier="375:142" id="ncW-FS-9r4"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sBi-cg-U0W" userLabel="SelectionStackView">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-C1-Eh3">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZL-dP-lj8">
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="l7h-VD-eoC"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A0k-CY-NrV">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQe-hV-xbB">
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="hOk-fq-dFg"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yrf-6b-dSE">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLN-rd-0PN">
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="oew-qf-WqI"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yxd-cI-Oa8">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nE8-Tl-sT3">
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="oBQ-3G-03Y"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B3k-4o-Ca3">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTc-We-4Ya">
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="NkV-D7-uGc"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-vE-7NG">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ko-dr-s97">
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="4" id="f6Y-Y8-fCX"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93390554189682007" green="0.91012400388717651" blue="0.88897901773452759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dla-lA-PlY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="3YS-oR-08t"/>
+                            <constraint firstItem="sBi-cg-U0W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3sL-PR-DYK"/>
+                            <constraint firstItem="gIU-ct-RRJ" firstAttribute="top" secondItem="zCQ-mn-arF" secondAttribute="bottom" constant="8" id="50i-v8-ZPA"/>
+                            <constraint firstItem="sBi-cg-U0W" firstAttribute="bottom" secondItem="ecL-Ud-kPQ" secondAttribute="top" id="8bY-SE-rYc"/>
+                            <constraint firstItem="ecL-Ud-kPQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="DLS-oh-PLI"/>
+                            <constraint firstItem="sBi-cg-U0W" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="IgY-Hs-6jS"/>
+                            <constraint firstItem="zCQ-mn-arF" firstAttribute="leading" secondItem="dla-lA-PlY" secondAttribute="leading" id="O6t-In-ZgZ"/>
+                            <constraint firstItem="sBi-cg-U0W" firstAttribute="top" secondItem="gIU-ct-RRJ" secondAttribute="bottom" constant="8" id="Tu4-OK-BJU"/>
+                            <constraint firstItem="ecL-Ud-kPQ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="VY2-Tb-sZA"/>
+                            <constraint firstItem="dla-lA-PlY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wf6-Mt-JWV"/>
+                            <constraint firstItem="ecL-Ud-kPQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YhU-W6-I8e"/>
+                            <constraint firstItem="zCQ-mn-arF" firstAttribute="trailing" secondItem="dla-lA-PlY" secondAttribute="trailing" id="bPO-4d-Odl"/>
+                            <constraint firstItem="dla-lA-PlY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ltq-RK-beb"/>
+                            <constraint firstItem="zCQ-mn-arF" firstAttribute="top" secondItem="dla-lA-PlY" secondAttribute="bottom" constant="8" id="rq6-zg-SQd"/>
+                            <constraint firstItem="gIU-ct-RRJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ztQ-Zt-zOy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="attackLabel" destination="Qe2-vR-HFS" id="i0Q-j1-J4O"/>
+                        <outlet property="fifthHeroButton" destination="3Fq-X7-GoV" id="UPa-az-xRO"/>
+                        <outlet property="firstHeroButton" destination="rwd-p9-KLy" id="A2v-qf-st5"/>
+                        <outlet property="fourthHeroButton" destination="Z0m-OK-4eM" id="uV1-bk-ExK"/>
+                        <outlet property="healLabel" destination="PiJ-hu-g8T" id="91I-wC-ZeP"/>
+                        <outlet property="hitPointsLabel" destination="4nT-Ag-qSy" id="gMK-B9-7mg"/>
+                        <outlet property="nameLabel" destination="zCQ-mn-arF" id="Rg5-OU-2tX"/>
+                        <outlet property="secondHeroButton" destination="XcG-Ta-JDr" id="OPi-WL-VEK"/>
+                        <outlet property="sixthHeroButton" destination="6Hz-ae-psN" id="dCO-DQ-vU1"/>
+                        <outlet property="thirdHeroButton" destination="KFk-A0-Xic" id="iUe-IW-mjN"/>
+                        <outlet property="typeLabel" destination="qvA-Jo-76A" id="B1Q-f6-zJZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.40000000000001" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OverwatchCharacters" width="1600" height="900"/>
+    </resources>
+</document>
