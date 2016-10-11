@@ -13,6 +13,7 @@ typealias Health = Int
 protocol Weapon {
     func fire() -> String
     func heal() -> String
+    
 }
 
 protocol OverwatchHero: Weapon, CustomStringConvertible {
@@ -21,6 +22,7 @@ protocol OverwatchHero: Weapon, CustomStringConvertible {
     var heroType: HeroType { get }
     func produceHeroType() -> HeroType
     func produceInitialHitPoints() -> Health
+    
 }
 
 extension OverwatchHero {
