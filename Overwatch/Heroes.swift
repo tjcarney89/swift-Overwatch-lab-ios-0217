@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Health = Double
+typealias Health = Int
 
 protocol Weapon {
     func fire() -> String
@@ -28,26 +28,26 @@ extension OverwatchHero {
     func fire() -> String {
         switch heroType {
         case .offense:
-            return "👊🏽"
+            return "Role: 👊🏽"
         case .defense:
-            return "✋🏽"
+            return "Role: ✋🏽"
         case .support:
-            return "👐🏽"
+            return "Role: 👐🏽"
         case .tank:
-            return "✊🏽"
+            return "Role: ✊🏽"
         }
     }
     
     func heal() -> String {
         switch heroType {
         case .offense:
-            return "✖️"
+            return "Heal: ✖️"
         case .defense:
-            return "✖️"
+            return "Heal: ✖️"
         case .support:
-            return "❤️"
+            return "Heal: ❤️"
         case .tank:
-            return "✖️"
+            return "Heal: ✖️"
         }
     }
     
@@ -69,10 +69,10 @@ extension OverwatchHero {
     
     func produceInitialHitPoints() -> Health {
         switch heroType {
-        case .offense: return 250.0
-        case .defense: return 250.0
-        case .support: return 150.0
-        case .tank: return 500.0
+        case .offense: return 250
+        case .defense: return 250
+        case .support: return 150
+        case .tank: return 500
         }
     }
     
@@ -90,13 +90,13 @@ enum HeroType: CustomStringConvertible {
     var description: String {
         switch self {
         case .offense:
-            return "💥 (Offense)"
+            return "Offense: 💥"
         case .defense:
-            return "🛡 (Defense)"
+            return "Defense: 🛡"
         case .support:
-            return "🚑 (Support)"
+            return "Support: 🚑"
         case .tank:
-            return "🐼 (Tank)"
+            return "Tank: 🐼"
         }
         
     }

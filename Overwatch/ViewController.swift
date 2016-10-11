@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var healLabel: UILabel!
     @IBOutlet weak var hitPointsLabel: UILabel!
-    
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -49,13 +48,16 @@ class ViewController: UIViewController {
     var nameViews: [UIView]!
     var lineViews: [UIView]!
     
+    let color = UIColor(red:0.56, green:0.56, blue:0.92, alpha:1.00)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupButtons()
+        setupLabels()
         createHeroes()
     }
     
@@ -65,30 +67,14 @@ class ViewController: UIViewController {
         nameViews.forEach { $0.layer.borderWidth = 0.0 }
         lineViews.forEach { $0.backgroundColor = UIColor.clear }
         
+        updateViews(with: sender)
         updateLabels(with: sender.hero)
-
-        sender.layer.borderWidth = 4.0
-        
-        let index = heroButtons.index(of: sender)!
-        
-        let nameLabel = nameLabels[index]
-        nameLabel.text = sender.hero.name.description
-        nameLabel.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        
-        let nameView = nameViews[index]
-        nameView.layer.borderWidth = 4.0
-        
-        let lineView = lineViews[index]
-        lineView.backgroundColor = UIColor.green
     }
     
-    func updateLabels(with hero: OverwatchHero) {
-        nameLabel.text = hero.name.description
-        typeLabel.text = hero.heroType.description
-        attackLabel.text = hero.fire()
-        healLabel.text = hero.heal()
-        hitPointsLabel.text = String(hero.hitPoints)
-    }
+}
+
+// MARK: - Hero Methods
+extension ViewController {
     
     func createHeroes() {
         let heroes: [Hero] = [Hero(name: .ana), Hero(name: .reinhardt), Hero(name: .soldier76), Hero(name: .reaper), Hero(name: .lúcio), Hero(name: .winston)]
@@ -99,6 +85,29 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateLabels(with hero: OverwatchHero) {
+        nameLabel.text = hero.name.description
+        typeLabel.text = hero.heroType.description
+        attackLabel.text = hero.fire()
+        healLabel.text = hero.heal()
+        hitPointsLabel.text = "Hit Points: \(hero.hitPoints)"
+    }
+    
+    func updateViews(with sender: OverwatchButton) {
+        let index = heroButtons.index(of: sender)!
+
+        sender.layer.borderWidth = 4.0
+
+        let nameLabel = nameLabels[index]
+        nameLabel.text = sender.hero.name.description
+        nameLabel.backgroundColor = color
+        
+        let nameView = nameViews[index]
+        nameView.layer.borderWidth = 4.0
+        
+        let lineView = lineViews[index]
+        lineView.backgroundColor = UIColor.green
+    }
 }
 
 
@@ -115,6 +124,14 @@ extension ViewController {
         nameViews.forEach { $0.layer.borderColor = UIColor.green.cgColor;  $0.backgroundColor = UIColor.clear }
         lineViews.forEach { $0.backgroundColor = UIColor.clear }
         nameLabels.forEach { $0.text = ""; $0.backgroundColor = UIColor.clear }
+    }
+    
+    func setupLabels() {
+        typeLabel.text = nil
+        attackLabel.text = nil
+        healLabel.text = nil
+        hitPointsLabel.text = nil
+        nameLabel.text = "Overwatch"
     }
 
 }

@@ -100,7 +100,8 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Ana">
                                         <attributes>
-                                            <font key="NSFont" size="50" name="AvenirNext-Regular"/>
+                                            <color key="NSColor" red="0.47688227891921997" green="0.47870910167694092" blue="0.78553038835525513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="52" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>

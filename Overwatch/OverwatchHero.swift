@@ -11,7 +11,7 @@ import Foundation
 struct Hero: OverwatchHero {
     var name: HeroName
     var heroType: HeroType { return produceHeroType() }
-    var hitPoints: Health = 0.0
+    var hitPoints: Health = 0
     
     init (name: HeroName) {
         self.name = name
