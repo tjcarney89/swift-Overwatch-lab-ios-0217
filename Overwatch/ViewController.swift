@@ -30,8 +30,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var fifthNameLabel: UILabel!
     @IBOutlet weak var sixthNameLabel: UILabel!
     
+    @IBOutlet weak var firstNameView: UIView!
+    @IBOutlet weak var secondNameView: UIView!
+    @IBOutlet weak var thirdNameView: UIView!
+    @IBOutlet weak var fourthNameView: UIView!
+    @IBOutlet weak var fifthNameView: UIView!
+    @IBOutlet weak var sixthNameView: UIView!
+    
+    @IBOutlet weak var firstLineView: UIView!
+    @IBOutlet weak var secondLineView: UIView!
+    @IBOutlet weak var thirdLineView: UIView!
+    @IBOutlet weak var fourthLineView: UIView!
+    @IBOutlet weak var fifthLineView: UIView!
+    @IBOutlet weak var sixthLineView: UIView!
+    
     var nameLabels: [UILabel]!
     var heroButtons: [OverwatchButton]!
+    var nameViews: [UIView]!
+    var lineViews: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,15 +61,25 @@ class ViewController: UIViewController {
     
     @IBAction func overwatchButtonTapped(_ sender: OverwatchButton) {
         heroButtons.forEach { $0.layer.borderWidth = 0.0 }
-        nameLabels.forEach { $0.layer.borderWidth = 0.0; $0.text = "" }
-        sender.layer.borderColor = UIColor.green.cgColor
-        sender.layer.borderWidth = 4.0
+        nameLabels.forEach { $0.text = ""; $0.backgroundColor = UIColor.clear }
+        nameViews.forEach { $0.layer.borderWidth = 0.0 }
+        lineViews.forEach { $0.backgroundColor = UIColor.clear }
+        
         updateLabels(with: sender.hero)
+
+        sender.layer.borderWidth = 4.0
+        
         let index = heroButtons.index(of: sender)!
+        
         let nameLabel = nameLabels[index]
-        nameLabel.layer.borderWidth = 4.0
-        nameLabel.layer.borderColor = UIColor.green.cgColor
         nameLabel.text = sender.hero.name.description
+        nameLabel.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
+        let nameView = nameViews[index]
+        nameView.layer.borderWidth = 4.0
+        
+        let lineView = lineViews[index]
+        lineView.backgroundColor = UIColor.green
     }
     
     func updateLabels(with hero: OverwatchHero) {
@@ -65,11 +91,10 @@ class ViewController: UIViewController {
     }
     
     func createHeroes() {
-        let heroes: [Hero] = [Hero(name: .ana), Hero(name: .bastion), Hero(name: .genji), Hero(name: .junkrat), Hero(name: .lúcio), Hero(name: .mcCree)]
+        let heroes: [Hero] = [Hero(name: .ana), Hero(name: .reinhardt), Hero(name: .soldier76), Hero(name: .reaper), Hero(name: .lúcio), Hero(name: .winston)]
         
         for (index, hero) in heroes.enumerated() {
             let button = heroButtons[index]
-            print(hero)
             button.hero = hero
         }
     }
@@ -82,12 +107,14 @@ extension ViewController {
     
     func setupButtons() {
         heroButtons = [firstHeroButton, secondHeroButton, thirdHeroButton, fourthHeroButton, fifthHeroButton, sixthHeroButton]
-        
         nameLabels = [firstNameLabel, secondNameLabel, thirdNameLabel, fourthNameLabel, fifthNameLabel, sixthNameLabel]
-        
-        nameLabels.forEach { $0.text = "" }
+        nameViews = [firstNameView, secondNameView, thirdNameView, fourthNameView, fifthNameView, sixthNameView]
+        lineViews = [firstLineView, secondLineView, thirdLineView, fourthLineView, fifthLineView, sixthLineView]
+
+        heroButtons.forEach { $0.layer.borderColor = UIColor.green.cgColor }
+        nameViews.forEach { $0.layer.borderColor = UIColor.green.cgColor;  $0.backgroundColor = UIColor.clear }
+        lineViews.forEach { $0.backgroundColor = UIColor.clear }
+        nameLabels.forEach { $0.text = ""; $0.backgroundColor = UIColor.clear }
     }
-    
-    
 
 }

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -229,75 +229,144 @@
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nb1-IH-Yh8" userLabel="NameStackView">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HJe-E6-1Ll">
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ana">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CXa-WQ-oaY">
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ana">
-                                                <attributes>
-                                                    <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j5I-hG-xg3">
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ana">
-                                                <attributes>
-                                                    <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6G3-qj-qgw">
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ana">
-                                                <attributes>
-                                                    <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="auK-eA-iOs">
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ana">
-                                                <attributes>
-                                                    <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PBp-lY-Ggq">
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ana">
-                                                <attributes>
-                                                    <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5g-Kg-te8" userLabel="firstNameView">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HJe-E6-1Ll">
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ana">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.76862745099999996" green="0.0" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="HJe-E6-1Ll" secondAttribute="trailing" constant="4" id="8r5-EZ-7KK"/>
+                                            <constraint firstAttribute="bottom" secondItem="HJe-E6-1Ll" secondAttribute="bottom" constant="4" id="Bq1-bE-aFf"/>
+                                            <constraint firstItem="HJe-E6-1Ll" firstAttribute="top" secondItem="l5g-Kg-te8" secondAttribute="top" constant="4" id="GYw-3y-ifd"/>
+                                            <constraint firstItem="HJe-E6-1Ll" firstAttribute="leading" secondItem="l5g-Kg-te8" secondAttribute="leading" constant="4" id="OIO-Er-EFd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-rM-YbE" userLabel="secondNameView">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CXa-WQ-oaY">
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ana">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.32549019610000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="CXa-WQ-oaY" secondAttribute="trailing" constant="4" id="Fra-6v-dYg"/>
+                                            <constraint firstItem="CXa-WQ-oaY" firstAttribute="top" secondItem="RbO-rM-YbE" secondAttribute="top" constant="4" id="Mgm-32-tzL"/>
+                                            <constraint firstAttribute="bottom" secondItem="CXa-WQ-oaY" secondAttribute="bottom" constant="4" id="hHd-CM-rsb"/>
+                                            <constraint firstItem="CXa-WQ-oaY" firstAttribute="leading" secondItem="RbO-rM-YbE" secondAttribute="leading" constant="4" id="o8D-Ku-rnQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwB-hS-s8f" userLabel="thirdNameView">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j5I-hG-xg3">
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ana">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.4039215686" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="j5I-hG-xg3" secondAttribute="bottom" constant="4" id="0u9-K1-75a"/>
+                                            <constraint firstItem="j5I-hG-xg3" firstAttribute="top" secondItem="CwB-hS-s8f" secondAttribute="top" constant="4" id="CRX-bL-JP6"/>
+                                            <constraint firstAttribute="trailing" secondItem="j5I-hG-xg3" secondAttribute="trailing" constant="4" id="Cx8-xs-P42"/>
+                                            <constraint firstItem="j5I-hG-xg3" firstAttribute="leading" secondItem="CwB-hS-s8f" secondAttribute="leading" constant="4" id="aUr-8y-qgg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdA-Ah-0dv" userLabel="fourthNameView">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6G3-qj-qgw">
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ana">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6G3-qj-qgw" firstAttribute="top" secondItem="zdA-Ah-0dv" secondAttribute="top" constant="4" id="7dH-2M-sei"/>
+                                            <constraint firstItem="6G3-qj-qgw" firstAttribute="leading" secondItem="zdA-Ah-0dv" secondAttribute="leading" constant="4" id="Isq-fo-Cnh"/>
+                                            <constraint firstAttribute="bottom" secondItem="6G3-qj-qgw" secondAttribute="bottom" constant="4" id="eQe-xG-5Cz"/>
+                                            <constraint firstAttribute="trailing" secondItem="6G3-qj-qgw" secondAttribute="trailing" constant="4" id="fON-DP-eIJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oz3-7d-Xs2" userLabel="fifthNameView">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="auK-eA-iOs">
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ana">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.43529411759999997" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="auK-eA-iOs" secondAttribute="trailing" constant="4" id="5bj-f0-tir"/>
+                                            <constraint firstAttribute="bottom" secondItem="auK-eA-iOs" secondAttribute="bottom" constant="4" id="6lr-7O-ejc"/>
+                                            <constraint firstItem="auK-eA-iOs" firstAttribute="top" secondItem="oz3-7d-Xs2" secondAttribute="top" constant="4" id="8RB-u7-gcC"/>
+                                            <constraint firstItem="auK-eA-iOs" firstAttribute="leading" secondItem="oz3-7d-Xs2" secondAttribute="leading" constant="4" id="yGV-3q-XD0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8l-EC-ISI" userLabel="sixthNameView">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PBp-lY-Ggq">
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Ana">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.59215686270000001" green="0.83137254900000002" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="PBp-lY-Ggq" secondAttribute="bottom" constant="4" id="XbD-aD-xvb"/>
+                                            <constraint firstItem="PBp-lY-Ggq" firstAttribute="leading" secondItem="S8l-EC-ISI" secondAttribute="leading" constant="4" id="cxU-HJ-rZl"/>
+                                            <constraint firstAttribute="trailing" secondItem="PBp-lY-Ggq" secondAttribute="trailing" constant="4" id="q9b-CW-aul"/>
+                                            <constraint firstItem="PBp-lY-Ggq" firstAttribute="top" secondItem="S8l-EC-ISI" secondAttribute="top" constant="4" id="xvf-0B-8aW"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -325,20 +394,32 @@
                     <connections>
                         <outlet property="attackLabel" destination="Qe2-vR-HFS" id="i0Q-j1-J4O"/>
                         <outlet property="fifthHeroButton" destination="3Fq-X7-GoV" id="UPa-az-xRO"/>
+                        <outlet property="fifthLineView" destination="JTc-We-4Ya" id="IK8-kl-eKI"/>
                         <outlet property="fifthNameLabel" destination="auK-eA-iOs" id="IdD-QE-sAq"/>
+                        <outlet property="fifthNameView" destination="oz3-7d-Xs2" id="qc9-4S-8hR"/>
                         <outlet property="firstHeroButton" destination="rwd-p9-KLy" id="A2v-qf-st5"/>
+                        <outlet property="firstLineView" destination="yZL-dP-lj8" id="NJn-0B-iG6"/>
                         <outlet property="firstNameLabel" destination="HJe-E6-1Ll" id="Nrr-Xi-0iL"/>
+                        <outlet property="firstNameView" destination="l5g-Kg-te8" id="GtM-zU-1zH"/>
                         <outlet property="fourthHeroButton" destination="Z0m-OK-4eM" id="uV1-bk-ExK"/>
+                        <outlet property="fourthLineView" destination="nE8-Tl-sT3" id="Q89-QQ-97l"/>
                         <outlet property="fourthNameLabel" destination="6G3-qj-qgw" id="axN-oB-A65"/>
+                        <outlet property="fourthNameView" destination="zdA-Ah-0dv" id="NwQ-9k-dxO"/>
                         <outlet property="healLabel" destination="PiJ-hu-g8T" id="91I-wC-ZeP"/>
                         <outlet property="hitPointsLabel" destination="4nT-Ag-qSy" id="gMK-B9-7mg"/>
                         <outlet property="nameLabel" destination="zCQ-mn-arF" id="Rg5-OU-2tX"/>
                         <outlet property="secondHeroButton" destination="XcG-Ta-JDr" id="OPi-WL-VEK"/>
+                        <outlet property="secondLineView" destination="KQe-hV-xbB" id="EGn-Ru-e9t"/>
                         <outlet property="secondNameLabel" destination="CXa-WQ-oaY" id="AmN-6j-cnO"/>
+                        <outlet property="secondNameView" destination="RbO-rM-YbE" id="yxG-Tp-fAf"/>
                         <outlet property="sixthHeroButton" destination="6Hz-ae-psN" id="dCO-DQ-vU1"/>
+                        <outlet property="sixthLineView" destination="6ko-dr-s97" id="MtA-1m-sWS"/>
                         <outlet property="sixthNameLabel" destination="PBp-lY-Ggq" id="5zQ-UU-yvV"/>
+                        <outlet property="sixthNameView" destination="S8l-EC-ISI" id="VQT-ce-0Rg"/>
                         <outlet property="thirdHeroButton" destination="KFk-A0-Xic" id="iUe-IW-mjN"/>
+                        <outlet property="thirdLineView" destination="aLN-rd-0PN" id="wgj-9W-Jfr"/>
                         <outlet property="thirdNameLabel" destination="j5I-hG-xg3" id="fUt-b9-gnt"/>
+                        <outlet property="thirdNameView" destination="CwB-hS-s8f" id="NKC-Yg-6WL"/>
                         <outlet property="typeLabel" destination="qvA-Jo-76A" id="B1Q-f6-zJZ"/>
                     </connections>
                 </viewController>
