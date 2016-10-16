@@ -10,21 +10,8 @@ import UIKit
 
 final class OverwatchButton: UIButton {
     
-    var hero: OverwatchHero! {
-        didSet { setButtonContents() }
+    var hero: Hero! {
+        didSet { setBackgroundImage(hero.image, for: .normal) }
     }
     
-    func setButtonContents() {
-        guard let hero = hero else { return }
-        switch hero.name {
-        case .lúcio:
-            setBackgroundImage(#imageLiteral(resourceName: "Lúcio"), for: .normal)
-        case .torbjörn:
-            setBackgroundImage(#imageLiteral(resourceName: "Torbjörn"), for: .normal)
-        default:
-            let image = UIImage(named: "\(hero.name)")
-            setBackgroundImage(image, for: .normal)
-        }
-    }
-
 }

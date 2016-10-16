@@ -1,13 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vwb-vh-yrl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Selection View Controller-->
+        <scene sceneID="EE9-Bc-SrR">
+            <objects>
+                <viewController id="Vwb-vh-yrl" customClass="SelectionViewController" customModule="Overwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2tD-12-45V"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lma-Te-CQb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IYc-lX-7Wp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jZQ-qF-xs2">
+                                <segments>
+                                    <segment title="Offense"/>
+                                    <segment title="Defense"/>
+                                    <segment title="Tank"/>
+                                    <segment title="Support"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeInHeroType:" destination="Vwb-vh-yrl" eventType="valueChanged" id="WEH-qW-x6g"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRC-vD-dPt">
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mon-9a-Bo5">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="em1-gq-PMN"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="em1-gq-PMN" firstAttribute="top" secondItem="mon-9a-Bo5" secondAttribute="top" id="K67-2W-1lF"/>
+                                            <constraint firstItem="em1-gq-PMN" firstAttribute="bottom" secondItem="mon-9a-Bo5" secondAttribute="bottom" id="Sg9-t5-bBA"/>
+                                            <constraint firstItem="em1-gq-PMN" firstAttribute="leading" secondItem="mon-9a-Bo5" secondAttribute="leading" id="db9-VJ-Q4k"/>
+                                            <constraint firstItem="em1-gq-PMN" firstAttribute="trailing" secondItem="mon-9a-Bo5" secondAttribute="trailing" id="gsQ-Ca-XgT"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mon-9a-Bo5" firstAttribute="leading" secondItem="bRC-vD-dPt" secondAttribute="leading" id="A5L-pL-9dV"/>
+                                    <constraint firstItem="mon-9a-Bo5" firstAttribute="trailing" secondItem="bRC-vD-dPt" secondAttribute="trailing" id="KUy-7N-xni"/>
+                                    <constraint firstAttribute="width" secondItem="bRC-vD-dPt" secondAttribute="height" multiplier="286:291" id="PMa-6h-zJd"/>
+                                    <constraint firstItem="em1-gq-PMN" firstAttribute="height" secondItem="bRC-vD-dPt" secondAttribute="height" id="c3c-9P-wYf"/>
+                                    <constraint firstItem="mon-9a-Bo5" firstAttribute="bottom" secondItem="bRC-vD-dPt" secondAttribute="bottom" id="iZ1-mZ-uIG"/>
+                                    <constraint firstItem="em1-gq-PMN" firstAttribute="width" secondItem="bRC-vD-dPt" secondAttribute="width" id="ivR-xf-sXz"/>
+                                    <constraint firstItem="mon-9a-Bo5" firstAttribute="top" secondItem="bRC-vD-dPt" secondAttribute="top" id="nL3-u6-9gr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llC-r8-BSX">
+                                <attributedString key="attributedText">
+                                    <fragment content="Reaper">
+                                        <attributes>
+                                            <font key="NSFont" size="48" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jZQ-qF-xs2" firstAttribute="trailing" secondItem="IYc-lX-7Wp" secondAttribute="trailingMargin" id="8eI-Gr-1nW"/>
+                            <constraint firstItem="bRC-vD-dPt" firstAttribute="trailing" secondItem="IYc-lX-7Wp" secondAttribute="trailingMargin" id="FZS-fy-Hkj"/>
+                            <constraint firstItem="jZQ-qF-xs2" firstAttribute="leading" secondItem="IYc-lX-7Wp" secondAttribute="leadingMargin" id="Vex-RJ-FCg"/>
+                            <constraint firstItem="bRC-vD-dPt" firstAttribute="leading" secondItem="IYc-lX-7Wp" secondAttribute="leadingMargin" id="Xh6-qv-4Tw"/>
+                            <constraint firstItem="llC-r8-BSX" firstAttribute="centerX" secondItem="IYc-lX-7Wp" secondAttribute="centerX" id="aWs-Ql-INj"/>
+                            <constraint firstItem="bRC-vD-dPt" firstAttribute="bottom" secondItem="jZQ-qF-xs2" secondAttribute="top" constant="-8" id="e1E-Ur-Uv7"/>
+                            <constraint firstItem="llC-r8-BSX" firstAttribute="centerY" secondItem="IYc-lX-7Wp" secondAttribute="centerY" multiplier="0.25" id="nb8-QW-avf"/>
+                            <constraint firstItem="jZQ-qF-xs2" firstAttribute="bottom" secondItem="Lma-Te-CQb" secondAttribute="top" constant="-20" id="w2e-gn-VQy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="characterStackView" destination="em1-gq-PMN" id="Y71-1C-OaY"/>
+                        <outlet property="characterStackViewWidthConstraint" destination="ivR-xf-sXz" id="06w-fj-wqp"/>
+                        <outlet property="containerView" destination="bRC-vD-dPt" id="RJb-T0-Caj"/>
+                        <outlet property="heroNameLabel" destination="llC-r8-BSX" id="n6H-H6-pk8"/>
+                        <outlet property="heroScrollView" destination="mon-9a-Bo5" id="fbX-59-DvD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhr-0Z-uhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175.2" y="133.5832083958021"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

@@ -13,7 +13,6 @@ typealias Health = Int
 protocol Weapon {
     func fire() -> String
     func heal() -> String
-    
 }
 
 protocol OverwatchHero: Weapon, CustomStringConvertible {
@@ -22,7 +21,6 @@ protocol OverwatchHero: Weapon, CustomStringConvertible {
     var heroType: HeroType { get }
     func produceHeroType() -> HeroType
     func produceInitialHitPoints() -> Health
-    
 }
 
 extension OverwatchHero {
@@ -61,10 +59,11 @@ extension OverwatchHero {
         switch name {
         case .genji, .mcCree, .pharah, .reaper, .soldier76, .tracer: return HeroType.offense
         case .bastion, .hanzo, .junkrat, .mei, .torbjörn, .widowmaker: return HeroType.defense
-        case .reinhardt, .roadhog, .winston, .zarya: return HeroType.tank
-        case .ana, .lúcio, .symmetra, .zenyatta: return HeroType.support
+        case .dva, .reinhardt, .roadhog, .winston, .zarya: return HeroType.tank
+        case .ana, .lúcio, .mercy, .symmetra, .zenyatta: return HeroType.support
         }
     }
+    
 }
 
 extension OverwatchHero {
@@ -100,12 +99,15 @@ enum HeroType: CustomStringConvertible {
         case .tank:
             return "Tank: 🐼"
         }
-        
+    }
+    
+   static var allTypes: [HeroType] {
+        return [.offense, .defense, .tank, .support]
     }
 }
 
 enum HeroName: CustomStringConvertible {
-    case genji, mcCree, pharah, reaper, soldier76, tracer, bastion, hanzo, junkrat, mei, torbjörn, widowmaker, reinhardt, roadhog, winston, zarya, ana, lúcio, symmetra, zenyatta
+    case genji, mcCree, pharah, reaper, soldier76, tracer, bastion, hanzo, junkrat, mei, torbjörn, widowmaker, dva, reinhardt, roadhog, winston, zarya, ana, lúcio, mercy, symmetra, zenyatta
     
     var description: String {
         switch self {
@@ -115,20 +117,38 @@ enum HeroName: CustomStringConvertible {
         case .reaper: return "Reaper"
         case .soldier76: return "Soldier 76"
         case .tracer: return "Tracer"
+            
         case .bastion: return "Bastion"
         case .hanzo: return "Hanzo"
         case .junkrat: return "Junkrat"
         case .mei: return "Mei"
         case .torbjörn: return "Torbjörn"
         case .widowmaker: return "Widowmaker"
+            
+        case .dva: return "DVA"
         case .reinhardt: return "Reinhardt"
         case .roadhog: return "Roadhog"
         case .winston: return "Winston"
         case .zarya: return "Zarya"
+            
         case .ana: return "Ana"
         case .lúcio: return "Lúcio"
+        case .mercy: return "Mercy"
         case .symmetra: return "Symmetra"
         case .zenyatta: return "Zenyatta"
+        }
+    }
+    
+    static func heroes(with type: HeroType) -> [HeroName] {
+        switch type {
+        case .offense:
+            return [.genji, .mcCree, .pharah, .reaper, .soldier76, .tracer]
+        case .defense:
+            return [.bastion, .hanzo, .junkrat, .mei, .torbjörn, .widowmaker]
+        case .tank:
+            return [.dva, .reinhardt, .roadhog, .winston, .zarya]
+        case .support:
+            return [.ana, .lúcio, .mercy, .symmetra, .zenyatta]
         }
     }
     
