@@ -21,7 +21,7 @@ Create a new `HeroAttributes.swift` file.
 
 In that `.swift` file, create an enum called `HeroName`. This enum should adopt the `CustomStringConvertible` protocol. When a type adopts a protocol, it must then conform to it. To conform to the `CustomStringConvertible`, you must provide (within your implementation of the `HeroName` enum) a read-only computed property called `description` of type `String`. Shortly, we will cover exactly how you will implement this read-only computed property.  
 
-The various cases of this `HeroName` enum should be as follows (if you're an OW fan, you will notice some heroes missing... I wonder which ones):  
+The various cases of this `HeroName` enum should be as follows:  
 * genji
 * mcCree
 * pharah
@@ -34,12 +34,14 @@ The various cases of this `HeroName` enum should be as follows (if you're an OW 
 * mei
 * torbjörn
 * widowmaker
+* dva
 * reinhardt
 * roadhog
 * winston
 * zarya
 * ana
 * lúcio
+* mercy
 * symmetra
 * zenyatta
 
@@ -109,6 +111,7 @@ Within your implementation of the `heal()` method, you should switch on the `her
 * `defense` should return "Heal: ✖️"
 * `support` should return "Heal: ❤️"
 * `tank` should return "Heal: ✖️"
+
 
 
 
