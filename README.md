@@ -13,7 +13,7 @@ Trailer (fan-made):
 
 # Quick Summary
 
-We will be building out multiples structs, protocols, extensions along with multiples elements from UIKit to create a simple iOS app.
+We will be building out multiples structs, protocols, extensions along with multiple elements from UIKit to create a simple iOS app.
 
 # Instructions
 
