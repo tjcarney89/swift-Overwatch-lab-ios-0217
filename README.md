@@ -12,7 +12,9 @@ Trailer (fan-made):
 
 Click the image below to play the demo on YouTube.
 
-[![](http://img.youtube.com/vi/Z3_K6sbW0NU/0.jpg)](https://www.youtube.com/watch?v=Z3_K6sbW0NU "Overwatch App Demo")
+```swift
+// TODO: Insert Video Here
+```
 
 
 # Quick Summary
