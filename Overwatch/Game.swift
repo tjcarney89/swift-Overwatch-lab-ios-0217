@@ -1,8 +1,8 @@
 //
-//  OverwatchGame.swift
+//  Game.swift
 //  Overwatch
 //
-//  Created by Jim Campagno on 10/16/16.
+//  Created by James Campagno on 10/21/16.
 //  Copyright © 2016 Gamesmith, LLC. All rights reserved.
 //
 
@@ -10,10 +10,10 @@ import Foundation
 
 
 struct Game {
-    fileprivate(set) var offenseCharacters: [Hero] = []
-    fileprivate(set) var defenseCharacters: [Hero] = []
-    fileprivate(set) var supportCharacters: [Hero] = []
-    fileprivate(set) var tankCharacters: [Hero] = []
+    var offenseCharacters: [Hero] = []
+    var defenseCharacters: [Hero] = []
+    var supportCharacters: [Hero] = []
+    var tankCharacters: [Hero] = []
     
     var heroType: HeroType = .offense
     

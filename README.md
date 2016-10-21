@@ -8,13 +8,7 @@ Trailer (fan-made):
 
 [![](http://img.youtube.com/vi/mLPkdWfOxi0/0.jpg)](https://www.youtube.com/watch?v=mLPkdWfOxi0 "Overwatch Trailer")
 
-# What you will be building
 
-Click the image below to play the demo on YouTube.
-
-```swift
-// TODO: Insert Video Here
-```
 
 
 # Quick Summary
@@ -55,7 +49,9 @@ Conform to the `CustomStringConvertible` protocol by implementing the read-only 
 
 ```swift
 case .genji: return "Genji"
-```
+```    
+
+---
 
 Still in the same `.swift` file, create another enum called `HeroType` which adopts the `CustomStringConvertible` protocol.  
 
@@ -72,6 +68,20 @@ Conform to the `CustomStringConvertible` protocol by implementing the read-only 
 * `tank` should return back "🐼"
 
 On the `HeroType`, create a static read-only computed property called `allTypes` of type [`HeroType`]. It should return back the following array: [`.offense`, `.defense`, `.tank`, `.support`]
+
+---
+
+Head back up to the `HeroName` enum you created above. We will be creating a function.
+
+This function should be a static function (meaning, it can only be called by the type itself and not on an instance of that particular type). The name of this static function should be `heroes(with:)` where it takes in one argument called `type` of type `HeroType`. The return type should be [`HeroName`].
+
+In your implementation of this function you should switch on `type` (the parameter name) and for each case you should return back the following:
+
+* `.offense` should return `[.genji, .mcCree, .pharah, .reaper, .soldier76, .tracer]`
+* `.defense` should return `[.bastion, .hanzo, .junkrat, .mei, .torbjörn, .widowmaker]`
+* `.tank` should return `[.dva, .reinhardt, .roadhog, .winston, .zarya]`
+* `.support` should return `[.ana, .lúcio, .mercy, .symmetra, .zenyatta]`
+
 
 ---
 
@@ -167,3 +177,42 @@ Scroll back up to the top of your struct. Lets make two more read-only computed 
 The first should be named `image` of type `UIImage`. You should call on the `produceButtonImage()` function here and return that value.
 
 The second read-only computed property should be called `profileImage` of type `UIImage` and it should return the value returned by a call to the `produceProfileImage()` method.
+
+---
+
+Create a `Game.swift` file.
+
+In this file, you should create a `Game` struct. In your implementation of this struct, it should have the following stored properties (all variables):
+* `offenseCharacters` of type [`Hero`], assigning an empty array as its default value.
+* `defenseCharacters` of type [`Hero`], assigning an empty array as its default value.
+* `supportCharacters` of type [`Hero`], assigning an empty array as its default value.
+* `tankCharacters` of type [`Hero`], assigning an empty array as its default value.
+* `heroType` of type `HeroType` with a default value of `.offense`
+
+Next you should create an extension on the `Game` struct and provide the following function.
+
+The function you should implement in the extension should be called `createAllHeroes()`. It takes in no arguments and returns nothing. It should also be marked as `mutating` because in your implementation, we will be mutating stored properties on `self`.
+
+Ultimately this function needs to create instances of every single character.
+
+Here's the tools you have available to you (tools that you implemented above).
+
+`HeroType.alltypes` should return back to you an array of all the types of heroes.
+
+`HeroName.heroes(with:)` takes in as an argument an instance of type `HeroType` which will return back an array of all the hero names of type `HeroName` for that particular `HeroType`.
+
+In creating an instance of `Hero`, it takes in as an argument through its initializer an instance of `HeroName`.
+
+You should create every hero (instances of `Hero`) and after creating them, appending them to the correct array.
+
+The arrays we have to work with on this type are `offenseCharacters`, `defenseCharacters`, `tankCharacters` and `supportCharacters` so make sure you're appending the `Hero` instance to the correct array based upon their type.
+
+After you're done implementing this function. Create an `init()` function. In that `init()` function you should call on the `createAllHeroes()` function you just implemented.
+
+Now you should create another function called `heroesForType()` which takes in no arguments and returns back [`Hero`]. In your implementation of this function you should switch on `heroType` (the stored property available to `self`) and for each case return the appropriate array. If the case is `.offense` you should return `offenseCharacters` and so on.
+
+After implementing this function, head back up to the top of the fle and create a read-only computed property called `heroes` of type [`Hero`]. It should call on the `heroesForType()` function you just implemented and return the value returned by a call to that function.
+
+# This concludes Part I
+
+# Part II has you implementing the UI.
