@@ -62,10 +62,10 @@ The cases of this enum are as follows:
 * tank
 
 Conform to the `CustomStringConvertible` protocol by implementing the read-only computed property named `description` of type `String`. In your implementation, you should switch on `self`--each case should return a unique `String`. See the following chart:  
-* `offense` should return back "💥"
-* `defense` should return back "🛡"
-* `support` should return back "🚑"
-* `tank` should return back "🐼"
+* `offense` should return back "Offense: 💥"
+* `defense` should return back "Defense: 🛡"
+* `support` should return back "Support: 🚑"
+* `tank` should return back "Tank: 🐼"
 
 On the `HeroType`, create a static read-only computed property called `allTypes` of type [`HeroType`]. It should return back the following array: [`.offense`, `.defense`, `.tank`, `.support`]
 
