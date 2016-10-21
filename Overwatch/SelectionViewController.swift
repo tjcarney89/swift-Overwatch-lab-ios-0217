@@ -45,8 +45,8 @@ class SelectionViewController: UIViewController, UIScrollViewDelegate {
         }
         
         let numberOfHeroes = CGFloat(game.heroes.count)
-        let width = (view.frame.size.width - 16 - 16) * CGFloat(numberOfHeroes)
-        characterStackViewWidthConstraint.constant = width - (view.frame.size.width - 16 - 16)
+        let width = (view.frame.size.width - 40) * CGFloat(numberOfHeroes - 1)
+        characterStackViewWidthConstraint.constant = width
         
         for hero in game.heroes {
             let imageView = UIImageView(image: hero.profileImage)
@@ -86,12 +86,5 @@ class SelectionViewController: UIViewController, UIScrollViewDelegate {
         
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

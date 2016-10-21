@@ -9,38 +9,78 @@
 import Foundation
 import UIKit
 
-struct Hero: OverwatchHero {
-    var name: HeroName
-    var hitPoints: Health = 0
-    var heroType: HeroType { return produceHeroType() }
-    var image: UIImage { return produceButtonImage() }
-    var profileImage: UIImage { return produceprofileImage() }
+typealias Health = Int
+
+protocol Weapon {
+    func fire() -> String
+    func heal() -> String
+}
+
+protocol OverwatchHero: Weapon, CustomStringConvertible {
+    var name: HeroName { get set }
+    var hitPoints: Health { get set }
+    var heroType: HeroType { get }
+    func produceHeroType() -> HeroType
+    func produceInitialHitPoints() -> Health
+}
+
+extension OverwatchHero {
     
-    init(name: HeroName) {
-        self.name = name
-        hitPoints = produceInitialHitPoints()
-    }
-    
-    func produceButtonImage() -> UIImage {
-        switch name {
-        case .lúcio:
-            return #imageLiteral(resourceName: "Lúcio")
-        case .torbjörn:
-            return #imageLiteral(resourceName: "Torbjörn")
-        default:
-            return UIImage(named: "\(name)")!
+    func fire() -> String {
+        switch heroType {
+        case .offense:
+            return "Offense: 👊🏽"
+        case .defense:
+            return "Defense: ✋🏽"
+        case .support:
+            return "Support: 👐🏽"
+        case .tank:
+            return "Tank: ✊🏽"
         }
     }
     
-    func produceprofileImage() -> UIImage {
-        switch name {
-        case .lúcio:
-            return #imageLiteral(resourceName: "LucioProfile")
-        case .torbjörn:
-            return #imageLiteral(resourceName: "TorbjornProfile")
-        default:
-            return UIImage(named: "\(name)Profile")!
+    func heal() -> String {
+        switch heroType {
+        case .offense:
+            return "Heal: ✖️"
+        case .defense:
+            return "Heal: ✖️"
+        case .support:
+            return "Heal: ❤️"
+        case .tank:
+            return "Heal: ✖️"
         }
     }
     
 }
+
+extension OverwatchHero {
+    
+    func produceHeroType() -> HeroType {
+        switch name {
+        case .genji, .mcCree, .pharah, .reaper, .soldier76, .tracer: return HeroType.offense
+        case .bastion, .hanzo, .junkrat, .mei, .torbjörn, .widowmaker: return HeroType.defense
+        case .dva, .reinhardt, .roadhog, .winston, .zarya: return HeroType.tank
+        case .ana, .lúcio, .mercy, .symmetra, .zenyatta: return HeroType.support
+        }
+    }
+    
+    func produceInitialHitPoints() -> Health {
+        switch heroType {
+        case .offense: return 250
+        case .defense: return 250
+        case .support: return 150
+        case .tank: return 500
+        }
+    }
+    
+}
+
+extension OverwatchHero {
+    var description: String {
+        return "Name: \(name)\nType: \(heroType)\nAttack: \(fire())\nHeal: \(heal())\nHit Points: \(hitPoints)"
+    }
+}
+
+
+
